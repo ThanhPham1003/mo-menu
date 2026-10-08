@@ -652,132 +652,29 @@
     /* Sticky Zalo Master Button */
     .zalo-sticky-card {
       position: relative;
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      justify-content: center;
       text-decoration: none;
-      filter: drop-shadow(0 10px 24px rgba(0, 104, 255, 0.45));
-      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
     }
 
     .zalo-sticky-card:hover {
-      transform: scale(1.05) translateY(-2px);
+      transform: scale(1.1) translateY(-3px);
+      filter: drop-shadow(0 10px 22px rgba(0, 104, 255, 0.5));
     }
 
     .zalo-sticky-card:active {
-      transform: scale(0.97);
+      transform: scale(0.95);
     }
 
-    /* Pulse wave effect around Zalo button */
-    .zalo-pulse-ring {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    .zalo-logo-img {
       width: 58px;
       height: 58px;
-      border-radius: 50%;
-      background: rgba(0, 104, 255, 0.4);
-      z-index: 1;
-      animation: zalo-ripple 2.2s infinite;
-      pointer-events: none;
-    }
-
-    .zalo-pulse-ring-2 {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: rgba(0, 104, 255, 0.25);
-      z-index: 1;
-      animation: zalo-ripple 2.2s infinite 0.75s;
-      pointer-events: none;
-    }
-
-    @keyframes zalo-ripple {
-      0% {
-        transform: translateY(-50%) scale(0.9);
-        opacity: 0.9;
-      }
-      70% {
-        transform: translateY(-50%) scale(1.6);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(-50%) scale(1.6);
-        opacity: 0;
-      }
-    }
-
-    .zalo-btn-inner {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, #0076ff 0%, #0050d4 100%);
-      border: 2px solid rgba(255, 255, 255, 0.35);
-      border-radius: 999px;
-      padding: 6px 16px 6px 8px;
-      gap: 10px;
-      box-shadow: 0 8px 24px rgba(0, 104, 255, 0.4);
-      cursor: pointer;
-    }
-
-    .zalo-icon-badge {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border-radius: 12px;
-      background: transparent;
-      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
-    }
-
-    .zalo-icon-badge img {
-      width: 100%;
-      height: 100%;
       object-fit: contain;
       display: block;
-      border-radius: 10px;
-    }
-
-    .zalo-text-block {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      line-height: 1.25;
-      padding-right: 4px;
-    }
-
-    .zalo-action-title {
-      font-size: 13.5px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 0.2px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .zalo-action-phone {
-      font-size: 14.5px;
-      font-weight: 800;
-      color: #ffe600;
-      letter-spacing: 0.8px;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    .zalo-badge-online {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      background: #00ff88;
-      border-radius: 50%;
-      box-shadow: 0 0 6px #00ff88;
+      border-radius: 14px;
     }
 
     /* Mobile bottom bar helper */
@@ -804,23 +701,9 @@
         bottom: 16px;
         right: 14px;
       }
-      .zalo-btn-inner {
-        padding: 5px 14px 5px 6px;
-        gap: 8px;
-      }
-      .zalo-icon-badge {
-        width: 40px;
-        height: 40px;
-      }
-      .zalo-icon-badge img {
-        width: 100%;
-        height: 100%;
-      }
-      .zalo-action-title {
-        font-size: 12px;
-      }
-      .zalo-action-phone {
-        font-size: 13.5px;
+      .zalo-logo-img {
+        width: 50px;
+        height: 50px;
       }
     }
 
@@ -890,11 +773,11 @@
         </div>
       </a>
       <div class="header-actions">
-        <a href="tel:0704402572" class="header-btn tel-btn" title="Gọi hotline">
+        <a href="tel:0898650922" class="header-btn tel-btn" title="Gọi hotline">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
-          <span>0704.402.572</span>
+          <span>0898.650.922</span>
         </a>
       </div>
     </div>
@@ -1200,22 +1083,7 @@
 
     <!-- Sticky Zalo Button for 0704402572 -->
     <a href="https://zalo.me/0704402572" target="_blank" rel="noopener noreferrer" class="zalo-sticky-card" id="zaloStickyBtn" title="Đặt món ngay qua Zalo">
-      <div class="zalo-pulse-ring"></div>
-      <div class="zalo-pulse-ring-2"></div>
-      
-      <div class="zalo-btn-inner">
-        <div class="zalo-icon-badge">
-          <!-- Zalo Official Logo Image -->
-          <img src="assets/logo-zalo.png" alt="Zalo Logo" class="zalo-logo-img">
-        </div>
-        <div class="zalo-text-block">
-          <div class="zalo-action-title">
-            <span class="zalo-badge-online"></span>
-            Đặt món qua Zalo
-          </div>
-          <div class="zalo-action-phone">0704.402.572</div>
-        </div>
-      </div>
+      <img src="assets/logo-zalo.png" alt="Zalo" class="zalo-logo-img">
     </a>
   </div>
 
